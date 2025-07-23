@@ -11,7 +11,7 @@ app.post("/translate", async (req, res) => {
     const response = await fetch("https://libretranslate.de/translate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ q, source, target, format }),
+      body: JSON.stringify({ q, source, target, format, api_key: "" }),
     });
 
     const data = await response.json();
